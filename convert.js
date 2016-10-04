@@ -12,9 +12,20 @@ function convertCtoF(tempC){
 
 }
 
-function convert(degC, degF){
+function convert(element){
 
-	value = ("degC = "+degC+", degF = "+degF);
+	var celsius = convertTemps.degC.value;
+	var fahrenheit = convertTemps.degF.value;
+
+	if(celsius != ""){
+		value = convertCtoF(celsius)
+	} else {
+		value = convertFtoC(fahrenheit);
+	}
+
+	value = ("degC = "+celsius+", degF = "+fahrenheit + ", result = "+value);
+
+	displayResult(element)
 
 }
 
@@ -23,6 +34,6 @@ function getValue() {
 }
 
 function displayResult(element){
-	resultElement = document.getElementById(element);
+	var resultElement = document.getElementById(element);
 	resultElement.innerHTML = getValue();
 }
