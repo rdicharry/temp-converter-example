@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<script src="convert.js"></script>
+		<form>
+			Degrees Celsius
+			<input type="text" name="degC" id="degC">
+			<br>
+			Degrees Fahrenheit
+			<input type="text" name="degF" id="degF">
+			<br>
+			<input type="submit" value="Convert" onClick="convert(degC.value, degF.value); displayResult('result')" >
+
+
+			<div>Result:</div>
+			<div name="result" id="result"> </div>
+
+		</form>
+	</body>
+</html>
